@@ -51,8 +51,8 @@ body {
     body {
         background-color: var(--very-dark-blue);
         background-image: url(../images/bg-desktop.svg);
-        background-size: 100% auto;
-        background-position: bottom;
+        background-size: 100% 50%;
+        background-position: left bottom;
     }
 }
 
