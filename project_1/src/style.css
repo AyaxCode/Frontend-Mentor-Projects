@@ -1,0 +1,252 @@
+:root {
+    /* SIZES  ==============================> */
+    --mobile:  375px;
+    --desktop: 1440px;
+
+    /* COLORS ==============================> */
+    /* primery */
+    --gradient: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+
+    /* neutral */
+    --pale-blue:      hsl(243, 100%, 93%);
+    --grayish-blue:   hsl(229, 7%, 55%);
+    --dark-blue:      hsl(228, 56%, 26%);
+    --very-dark-blue: hsl(229, 57%, 11%);
+
+    /* ICON SIZES */
+    --icon: 3.5rem;
+
+    /* GENERAL FONT */
+    --font: 1.4rem;
+
+    /* BORDERS*/
+    --general-border: 1.2rem;
+    --border-bar: 10rem;
+}
+
+*, *::before, *::after { box-sizing: border-box }
+
+html {
+    font-size: 62.5%;
+    width: 100%;
+    height: 100vh;
+}
+
+body {
+    background-image: url(../images/bg-mobile.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--pale-blue);
+    font-family: "Raleway", Helvetica, Arial, sans-serif;
+    font-size: var(--font);
+    font-weight: 400;
+    height: 100%;
+    margin: 0;
+    padding: 2.5rem;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    body { background-image: url(../images/bg-desktop.svg);}
+}
+
+strong {
+    font-weight: 700;
+    color: var(--pale-blue);
+}
+
+p { margin: 0 0 var(--font) 0 }
+
+.sr-only { display: none }
+
+/* MAIN CONTAINER */
+
+/* Center the container */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1440px;
+    width: 100%;
+}
+
+/* FYLO CLASSES */
+.fylo-content {
+    margin: 0 auto;
+    max-width: 996px;
+    width: 100%;
+}
+
+@media (min-width: 767px) {
+    .fylo-content {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+}
+
+.fylo-content > * {
+    background-color: var(--dark-blue);
+    border-radius: var(--general-border);
+    margin-bottom: 1.5rem;
+    height: auto;
+}
+
+.fylo-content > *:last-child { margin-bottom: 0 }
+
+.fylo-services { 
+    border-top-right-radius: 10rem;
+    flex: 0 0 32.5rem;
+    max-width: 32.5rem;
+    padding: 3.5rem;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .fylo-services {
+        margin-bottom: 0;
+        margin-right: 2.2rem;
+    }
+}
+
+.fylo-services .fylo-logo img {
+    height: 100%;
+    margin-bottom: 3.5rem;
+    width: auto;
+}
+
+.fylo-services .fylo-icons {
+    align-items: center;
+    display: flex;
+}
+
+.fylo-icons .fylo-icon {
+    background-color: var(--very-dark-blue);
+    border-radius: 1rem;
+    display: inline-block;
+    height: calc(var(--icon) + 1.2rem);
+    margin-right: 1.5rem;
+    padding: 1.2rem;
+    width: calc(var(--icon) + 1.2rem);
+}
+
+.fylo-icons .fylo-icon:last-child { margin-right: 0 }
+
+.fylo-icon::before {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.fylo-icon.fylo-file::before { background-image: url(../images/icon-document.svg) }
+
+.fylo-icon.fylo-folder::before { background-image: url(../images/icon-folder.svg) }
+
+.fylo-icon.fylo-upload::before { background-image: url(../images/icon-upload.svg) }
+
+/* FYLO INFORMATION */
+.fylo-information {
+    background-color: var(--dark-blue);
+    color: var(--grayish-blue);
+    padding: 3rem;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .fylo-information { flex: 1 }
+}
+
+.fylo-bar,
+.fylo-bar .fylo-bar__container { width: 100% }
+
+.fylo-bar__container,
+.fylo-bar__container .fylo-bar__bar { border-radius: var(--border-bar) }
+
+.fylo-bar__container {
+    background-color: var(--very-dark-blue);
+    margin-bottom: 1.2rem;
+    padding: .3rem;
+}
+
+.fylo-bar__container .fylo-bar__bar {
+    background: var(--gradient);
+    display: block;
+    padding: .7rem 0;
+    position: relative;
+}
+
+.fylo-bar__container .fylo-bar__bar::before {
+    background-color: white;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 1rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1rem;
+}
+
+.fylo-bar__container .fylo-bar__bar.bar-80 { width: 80% }
+
+.fylo-bar__container .fylo-bar__bar.bar-80::before { left: calc(100% - 1.2rem) }
+
+
+.fylo-bar__data {
+    align-items: center;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fylo-gb {
+    background-color: white;
+    border-radius: var(--general-border);
+    color: var(--very-dark-blue);
+    display: block;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 0 auto;
+    margin-bottom: -6.5rem;
+    margin-top: 2rem;
+    max-width: 18rem;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .fylo-gb {
+        border-bottom-right-radius: 0;
+        position: absolute;
+        top: -5rem;
+        right: 3rem;
+        margin: 0;
+    }
+
+    .fylo-gb::before {
+        background-color: inherit;
+        content: "";
+        clip-path: polygon(0 0, 100% 0, 100% 100%);
+        display: block;
+        position: absolute;
+        bottom: -2rem;
+        right: 0;
+        height: 2rem;
+        width: 2rem;
+    }
+}
+
+.fylo-gb small {
+    color: var(--grayish-blue);
+    font-size: .4em;
+    vertical-align: middle;
+}

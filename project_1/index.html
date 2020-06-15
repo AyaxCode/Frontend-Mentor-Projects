@@ -1,31 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Fylo data storage component</title>
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+	
+	<title>Frontend Mentor | Fylo data storage component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="src/style.css">
+
+	<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+	<style>
+		.attribution { font-size: 11px; text-align: center; }
+		.attribution a { color: var(--pale-blue); font-weight: 700; }
+	</style>
 </head>
 <body>
 
-  You’ve used 815 GB of your storage
+  
+	<main class="main-container"> <!-- MAIN CONTAINER -->
+		<div class="fylo-content">
+			<!-- FIRST SECTION -->
+			<section class="fylo-services">
+				<div class="fylo-logo"><img src="images/logo.svg" alt="Fylo logo"></div>
+				<div class="fylo-icons">
+					<span class="fylo-icon fylo-file"><i class="sr-only">file</i></span>
+					<span class="fylo-icon fylo-folder"><i class="sr-only">folder</i></span>
+					<span class="fylo-icon fylo-upload"><i class="sr-only">cloud</i></span>
+				</div>
+			</section>
 
-  185 GB Left
+			<!-- SECOND SECTION -->
+			<section class="fylo-information">
+				<p class="fylo-text">
+					You’ve used <strong>815 GB</strong> of your storage
+				</p>
+				<div class="fylo-bar">
+					<div class="fylo-bar__container">
+						<span class="fylo-bar__bar bar-80"></span>
+					</div>
+					<div class="fylo-bar__data">
+						<span>0 GB</span>
+						<span>1000 GB</span>
+					</div>
+
+					<div class="fylo-gb">185 <small>gb left</small></div>
+				</div>
+			</section>
+		</div>
+  	</main>
   
-  0 GB
-  1000 GB
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+	<div class="attribution">
+		Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+		Coded by <a href="https://ayaxdev.com">AyaxCode</a>.
+	</div>
 </body>
 </html>
