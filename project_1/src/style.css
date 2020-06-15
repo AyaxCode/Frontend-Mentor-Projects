@@ -49,7 +49,10 @@ body {
 
 @media (min-width: 768px) {
     body {
+        background-color: var(--very-dark-blue);
         background-image: url(../images/bg-desktop.svg);
+        background-size: 100% auto;
+        background-position: bottom;
     }
 }
 
