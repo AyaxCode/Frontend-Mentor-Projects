@@ -48,6 +48,12 @@ body {
 }
 
 @media (min-width: 768px) {
+    body {
+        background-image: url(../images/bg-desktop.svg);
+    }
+}
+
+@media (min-width: 768px) {
     body { background-image: url(../images/bg-desktop.svg);}
 }
 
